@@ -1,0 +1,15 @@
+.completed {
+	text-decoration: line-through;
+}
+
+.none_completed {
+	text-decoration: none;
+}
+
+ul li:hover {
+	color: #899089
+}
+
+.active {
+	color: blue
+}
