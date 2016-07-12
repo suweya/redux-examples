@@ -4,7 +4,7 @@ var path = require('path');
 module.exports= {
 
 	// source-map 配置
-	devtool: 'cheap-module-eval-source-map'
+	devtool: 'cheap-module-eval-source-map',
 	
 	// 编译文件入口
 	entry: [
@@ -29,7 +29,12 @@ module.exports= {
 	        loaders: ['react-hot', 'babel-loader']
 	      },
 	      // css-loader
-	      { test: /\.css$/, loader: 'style-loader!css-loader?modules' },
+	      //{ test: /\.css$/, loader: 'style-loader!css-loader?modules' },
+	      {
+	        test: /\.css?$/,
+	        loaders: [ 'style', 'raw' ],
+	        include: __dirname
+	      }
 	    ]
   	},
 

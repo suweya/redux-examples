@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import classnames from 'classnames'
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE) } from '../constants/TodoFilters'
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../constants/TodoFilters'
 
 const FILTER_TITLES = {
 	[SHOW_ALL]: 'All',
@@ -14,11 +14,11 @@ class Footer extends Component {
 		const { activeCount } = this.props
 		const itemWord = activeCount === 1 ? 'item' : 'items'
 
-		return ({
+		return (
 			<span className="todo-count">
 				<strong>{activeCount || 'NO'}</strong> {itemWord} left
 			</span>
-		})
+		)
 	}
 
 	renderFilterLink(filter) {
@@ -38,7 +38,7 @@ class Footer extends Component {
 		const { completedCount, onClearCompleted } = this.props
 		if (completedCount > 0) {
 			return (
-				<button classname="clear-completed"
+				<button className="clear-completed"
 						onClick={onClearCompleted}>
 					Clear completed
 				</button>
@@ -48,9 +48,9 @@ class Footer extends Component {
 
 	render() {
 		return (
-			<footer classname="footer">
+			<footer className="footer">
 				{this.renderTodoCount()}
-				<ul classname="filters">
+				<ul className="filters">
 					{
 						[SHOW_ALL, SHOW_ACTIVE, SHOW_ACTIVE].map(filter => {
 							<li key={filter}>

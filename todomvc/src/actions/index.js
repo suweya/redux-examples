@@ -1,20 +1,20 @@
 import * as types from '../constants/ActionTypes'
 
-export addTodo(text) => {
+export const addTodo = (text) => {
 	return {
 		type: types.ADD_TODO,
 		text
 	}
 }
 
-export deleteTodo(id) => {
+export const deleteTodo = (id) => {
 	return {
 		type: types.DELETE_TODO,
 		id
 	}
 }
 
-export editTodo(id, text) => {
+export const editTodo = (id, text) => {
 	return {
 		type: types.EDIT_TODO,
 		id,
@@ -22,20 +22,20 @@ export editTodo(id, text) => {
 	}
 }
 
-export completeTodo(id) => {
+export const completeTodo = (id) => {
 	return {
 		type: types.COMPLETE_TODO,
 		id
 	}
 }
 
-export completeAll() {
+export const completeAll = () => {
 	return {
 		type: types.COMPLETE_ALL
 	}
 }
 
-export clearCompleted() {
+export const clearCompleted = () => {
 	return {
 		type: types.CLEAR_COMPLETED
 	}
