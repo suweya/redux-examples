@@ -26,7 +26,7 @@ class Footer extends Component {
 		const { filter: selectedFilter, onShow } = this.props
 
 		return (
-			<a className={classnames({ slected: filter === selectedFilter})}
+			<a className={classnames({ selected: filter === selectedFilter})}
 				style={{cursor: 'pointer'}}
 				onClick={() => onShow(filter)}>
 				{title}
@@ -52,11 +52,11 @@ class Footer extends Component {
 				{this.renderTodoCount()}
 				<ul className="filters">
 					{
-						[SHOW_ALL, SHOW_ACTIVE, SHOW_ACTIVE].map(filter => {
+						[SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED].map(filter => 
 							<li key={filter}>
 								{this.renderFilterLink(filter)}
 							</li>
-						})
+						)
 					}
 				</ul>
 				{this.renderClearButton()}

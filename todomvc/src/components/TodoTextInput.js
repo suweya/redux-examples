@@ -3,8 +3,10 @@ import classnames from 'classnames'
 
 class TodoTextInput extends Component {
 
+	// 构造函数
 	constructor(props, context) {
 		super(props, context)
+		// 设置文本框的值
 		this.state = {
 			text: this.props.text || ''
 		}
